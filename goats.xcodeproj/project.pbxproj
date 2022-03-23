@@ -14,6 +14,11 @@
 		EEAA361227E8D743000A17DC /* goatsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAA361127E8D743000A17DC /* goatsTests.swift */; };
 		EEAA361C27E8D743000A17DC /* goatsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAA361B27E8D743000A17DC /* goatsUITests.swift */; };
 		EEAA361E27E8D743000A17DC /* goatsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAA361D27E8D743000A17DC /* goatsUITestsLaunchTests.swift */; };
+		EEAA362B27E8D78E000A17DC /* Bundle-Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAA362A27E8D78E000A17DC /* Bundle-Decodable.swift */; };
+		EEAA362D27E8D7F3000A17DC /* goats.json in Resources */ = {isa = PBXBuildFile; fileRef = EEAA362C27E8D7F3000A17DC /* goats.json */; };
+		EEE8122127EBC19900AA0719 /* Goat.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE8122027EBC19900AA0719 /* Goat.swift */; };
+		EEE8122327EBC71200AA0719 /* GoatsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE8122227EBC71200AA0719 /* GoatsViewModel.swift */; };
+		EEE8122727EBCC5500AA0719 /* GoatDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE8122627EBCC5500AA0719 /* GoatDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +49,11 @@
 		EEAA361727E8D743000A17DC /* goatsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = goatsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEAA361B27E8D743000A17DC /* goatsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = goatsUITests.swift; sourceTree = "<group>"; };
 		EEAA361D27E8D743000A17DC /* goatsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = goatsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		EEAA362A27E8D78E000A17DC /* Bundle-Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle-Decodable.swift"; sourceTree = "<group>"; };
+		EEAA362C27E8D7F3000A17DC /* goats.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = goats.json; sourceTree = "<group>"; };
+		EEE8122027EBC19900AA0719 /* Goat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Goat.swift; sourceTree = "<group>"; };
+		EEE8122227EBC71200AA0719 /* GoatsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoatsViewModel.swift; sourceTree = "<group>"; };
+		EEE8122627EBCC5500AA0719 /* GoatDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoatDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,7 +105,11 @@
 			isa = PBXGroup;
 			children = (
 				EEAA360027E8D73D000A17DC /* goatsApp.swift */,
-				EEAA360227E8D73D000A17DC /* ContentView.swift */,
+				EEAA362C27E8D7F3000A17DC /* goats.json */,
+				EEE8122927EBCD0B00AA0719 /* Views */,
+				EEE8122827EBCCFF00AA0719 /* View Models */,
+				EEE8122A27EBCD1300AA0719 /* Models */,
+				EEAA362A27E8D78E000A17DC /* Bundle-Decodable.swift */,
 				EEAA360427E8D743000A17DC /* Assets.xcassets */,
 				EEAA360627E8D743000A17DC /* Preview Content */,
 			);
@@ -125,6 +139,31 @@
 				EEAA361D27E8D743000A17DC /* goatsUITestsLaunchTests.swift */,
 			);
 			path = goatsUITests;
+			sourceTree = "<group>";
+		};
+		EEE8122827EBCCFF00AA0719 /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				EEE8122227EBC71200AA0719 /* GoatsViewModel.swift */,
+			);
+			path = "View Models";
+			sourceTree = "<group>";
+		};
+		EEE8122927EBCD0B00AA0719 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EEAA360227E8D73D000A17DC /* ContentView.swift */,
+				EEE8122627EBCC5500AA0719 /* GoatDetailView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		EEE8122A27EBCD1300AA0719 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				EEE8122027EBC19900AA0719 /* Goat.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,6 +271,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EEAA360827E8D743000A17DC /* Preview Assets.xcassets in Resources */,
+				EEAA362D27E8D7F3000A17DC /* goats.json in Resources */,
 				EEAA360527E8D743000A17DC /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -257,8 +297,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EEE8122127EBC19900AA0719 /* Goat.swift in Sources */,
 				EEAA360327E8D73D000A17DC /* ContentView.swift in Sources */,
+				EEE8122727EBCC5500AA0719 /* GoatDetailView.swift in Sources */,
+				EEE8122327EBC71200AA0719 /* GoatsViewModel.swift in Sources */,
 				EEAA360127E8D73D000A17DC /* goatsApp.swift in Sources */,
+				EEAA362B27E8D78E000A17DC /* Bundle-Decodable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
