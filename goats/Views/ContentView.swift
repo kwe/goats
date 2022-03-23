@@ -8,36 +8,26 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var searchText = ""
-    @StateObject private var goatsVM = GoatsViewModel()
+    @StateObject var goatsVM = GoatsViewModel()
     
     var body: some View {
         NavigationView {
             VStack {
-                List(searchResults, id:\.self) { goat in
+                List(goatsVM.goatData.indices, id: \.self) { idx in
                     NavigationLink(
-                        destination: GoatDetailView(goat: goat),
+                        destination: GoatDetailView(goat: $goatsVM.goatData[idx]),
                         label: {
                             HStack {
-                                if (goat.liked){
+                                if (goatsVM.goatData[idx].liked){
                                     Image(systemName: "heart.fill")
                                         .foregroundColor(.red)
                                 }
-                                Text(goat.name)
+                                Text(goatsVM.goatData[idx].name)
                             }
                         })
                 }
-                .searchable(text: $searchText)
                 .navigationTitle("Goats")
             }
-        }
-    }
-    
-    var searchResults: [Goat] {
-        if searchText.isEmpty {
-            return goatsVM.goatData
-        } else {
-            return goatsVM.goatData.filter { $0.name.contains(searchText)}
         }
     }
 }

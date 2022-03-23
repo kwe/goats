@@ -9,11 +9,18 @@ import SwiftUI
 
 struct GoatDetailView: View {
     @Binding var goat: Goat
+    
     var body: some View {
-        Text("Hello, \(goat.name)")
+        VStack {
+            Text("Hello, \(goat.name)")
+            Toggle("Like", isOn: $goat.liked)
+        }
+        .padding()
     }
 }
 
+
+//
 //struct GoatDetailView_Previews: PreviewProvider {
 //    static var previews: some View {
 //        GoatDetailView(goat: Goat(name: "Foxy", image: "", otherNames: "Barry", origin: "Barry Island", purpose: "Eat stuff", references: ""))
