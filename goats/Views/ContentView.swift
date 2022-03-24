@@ -16,7 +16,7 @@ struct ContentView: View {
             VStack {
                 List(searchResults, id:\.self) { goat in
                     NavigationLink(
-                        destination: GoatDetailView(goat: goat),
+                        destination: GoatDetailView(),
                         label: {
                             HStack {
                                 if (goat.liked){

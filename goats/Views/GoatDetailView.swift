@@ -8,9 +8,9 @@
 import SwiftUI
 
 struct GoatDetailView: View {
-    @Binding var goat: Goat
+//    @Binding var goat: Goat
     var body: some View {
-        Text("Hello, \(goat.name)")
+        Text("Hello")
     }
 }
 
