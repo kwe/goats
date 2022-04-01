@@ -12,17 +12,23 @@ struct GoatDetailView: View {
     
     var body: some View {
         VStack {
-            Text("Hello, \(goat.name)")
-            Toggle("Like", isOn: $goat.liked)
+            Text(goat.name)
+                .font(.largeTitle)
+            Form {
+                Section {
+                Toggle("Like", isOn: $goat.liked)
+                    .padding()
+                }
+            }
         }
         .padding()
     }
 }
 
 
-//
-//struct GoatDetailView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        GoatDetailView(goat: Goat(name: "Foxy", image: "", otherNames: "Barry", origin: "Barry Island", purpose: "Eat stuff", references: ""))
-//    }
-//}
+
+struct GoatDetailView_Previews: PreviewProvider {
+    static var previews: some View {
+        GoatDetailView(goat: .constant (Goat(name: "Foxy", image: "", otherNames: "Barry", origin: "Barry Island", purpose: "Eat stuff", references: "")))
+    }
+}
