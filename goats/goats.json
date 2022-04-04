@@ -1,5 +1,5 @@
-[
- {
+{
+"goats": [  {
    "Name": "Abaza",
    "Image": "",
    "Other names": "Abkhasian, Abkhazskaya",
@@ -1336,3 +1336,4 @@
    "References": ""
  }
 ]
+}
